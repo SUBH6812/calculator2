@@ -1,0 +1,89 @@
+<html>
+<head>
+<style>
+*{
+padding:0; margin:0; box-sizing:border-box;}
+
+#cal{
+width:500px; height:700px; background-color:#fee; 
+background-image:linear-gradient( 45deg,red,green,white,blue,black); 
+margin:40px auto; position:relative;border-radius:50px;
+}
+
+#cal1{
+width:300px; height:550px; background-color:#ff0;
+margin:40px auto; position:absolute;left:100px;border-radius:50px;
+box-shadow:15px 10px #dd0;
+}
+
+#result{
+width:100%; height:150px;}
+
+#keyboard{
+width:100%; height:350px;}
+
+button{ width:50px;height:50px;float:left;
+padding:13px; margin:10px;border-radius:50%; border-width:0;
+font-weight:bold;font-size:24px;
+}
+
+p{
+width:250px;height:50px; margin:20px; background-color:#fff;
+text-align:right; font-size:30px;font-weight:bold;border-radius:30px;
+padding-right:40px;padding-top:10px;}
+
+.empty,.number {background-color:#ff0;}
+
+.number,.operator{
+cursor:pointer;}
+
+.operator:active, .number:active{ 
+font-size:12px;}
+ 
+.operator:focus, .number:focus, .empty:focus{
+outline:0;}
+#history-value{
+overflow:hidden;}
+#output-value{
+overflow:hidden;}
+
+</style>
+<!--<script src="sss6.js"> </script>-->
+</head>
+<body>
+<h1 style="text-align:center; font-family:verdana;color:#f69;">SIMPLE CALCULATOR</h1>
+<div id="cal">
+<div id="cal1">
+<div id="result" >
+<div id="history"><p id="history-value"></p> </div>
+<div id="output"><p id="output-value"></p></div>
+</div>
+<div id="keyboard">
+<button class="operator" onclick="myclean(this)" ="clear">C</button>
+<button class="operator" id="backspace">CE</button>
+<button class="operator"onclick="myfunction(this)" id="%">%</button>
+<button class="operator"onclick="myfunction(this)" id="/">/</button>
+<button class="number" onclick="myfunction(this)" id="9">9</button>
+<button class="number" onclick="myfunction(this)" id="8">8</button>
+<button class="number" onclick="myfunction(this)" id="7">7</button>
+<button class="operator" onclick="myfunction(this)" id="*">*</button>
+<button class="number"onclick="myfunction(this)" id="6">6</button>
+<button class="number"onclick="myfunction(this)" id="5">5</button>
+<button class="number"onclick="myfunction(this)" id="4">4</button>
+<button class="operator"onclick="myfunction(this)" id="+">+</button>
+<button class="number"onclick="myfunction(this)" id="3">3</button>
+<button class="number"onclick="myfunction(this)" id="2">2</button>
+<button class="number"onclick="myfunction(this)" id="1">1</button>
+<button class="operator"onclick="myfunction(this)" id="-">-</button>
+<button class="empty" id="empty"></button>
+<button class="number"onclick="myfunction(this)" id="0">0</button>
+<button class="empty" id="empty"></button>
+<button class="operator" onclick="myequal(this)" id="=">=</button>
+
+</div>
+</div>
+</div>
+<script src="sss11.js"> </script>
+
+</body>
+</html>
